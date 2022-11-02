@@ -44,7 +44,15 @@ The work directory is internal to OverlayFS.
 
 - The file exists in both the container layer and the image layer: Files in the container layer (upperdir) obscure files with the same name in the image layer (lowerdir).
 
-### Modifying files or directories
+## Bind mounts
+
+<p align="center"><img src="./images/fig2.png"></p>
+
+- **Volumes** are stored in a part of the host filesystem which is managed by Docker (/var/lib/docker/volumes/ on Linux). Non-Docker processes should not modify this part of the filesystem. Volumes are the best way to persist data in Docker.
+
+- **Bind mounts** may be stored anywhere on the host system. They may even be important system files or directories. Non-Docker processes on the Docker host or a Docker container can modify them at any time.
+
+- **tmpfs mounts** are stored in the host system’s memory only, and are never written to the host system’s filesystem.
 
 
 
