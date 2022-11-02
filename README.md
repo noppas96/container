@@ -2,7 +2,7 @@
 
 Docker uses storage drivers to store image layers, and to store data in the writable layer of a container, The container’s writable layer does not persist after the container is deleted
 
-## Container Size on Diks
+## Container Size on Disk
 To view the approximate size of a running container
 ```
 docker ps -s
