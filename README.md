@@ -22,5 +22,9 @@ The ways a container can take up disk space
 When you use docker pull to pull down an image from a repository,  Docker’s local storage area, which is usually /var/lib/docker/ on Linux hosts, list the contents of /var/lib/docker/<storage-driver\>. This example uses the overlay2 storage driver 
 [more.](https://docs.docker.com/storage/storagedriver/)
 
+## Overlay2 storage Driver
 
+OverlayFS layers two directories on a single Linux host and presents them as a single directory. These directories are called layers and the unification process is referred to as a union mount. OverlayFS refers to the lower directory as lowerdir and the upper directory a upperdir. The unified view is exposed through its own directory called merged.
+
+<p align="center"><img src="./images/fig1.jpg"></p>
 
